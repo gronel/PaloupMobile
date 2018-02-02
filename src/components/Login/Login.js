@@ -1,38 +1,60 @@
-import React, {Component} from 'react'
-import {Text, View, StyleSheet, Image} from 'react-native'
+import React, {Component} from 'react';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 
-import Logo from '../../Images/logo.png'
-import LoginForm from './LoginForm';
+const Login = props => {
 
-export default class Login extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image style={styles.logo} source={require('../../Images/logo.png')}/>
-        </View>
-        <View style={styles.formContainer}>
-          <LoginForm/>
-        </View>
-      </View>
-    )
-  }
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.inputBox}
+        underlineColorAndroid='#1c313a'
+        placeholder="Email"
+        placeholderTextColor="#95a5a6"
+        selectionColor="#fff"
+        keyboardType="email-address"
+        onSubmitEditing={() => this.password.focus()}/>
+      <TextInput
+        style={styles.inputBox}
+        underlineColorAndroid='#1c313a'
+        placeholder="Password"
+        secureTextEntry={true}
+        placeholderTextColor="#95a5a6"
+        ref={(input) => this.password = input}/>
+      <TouchableOpacity style={styles.button} onPress={props.loginHandler}>
+        <Text style={styles.buttonText}>{props.type}</Text>
+      </TouchableOpacity>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
-
   container: {
-    flex: 1,
-    backgroundColor: '#e74c3c'
-  },
-  logoContainer: {
-    alignItems: 'center',
     flexGrow: 1,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  logo: {
-    width: 120,
-    height: 100,
-    resizeMode: 'stretch'
+
+  inputBox: {
+    width: 300,
+    backgroundColor: '#ecf0f1',
+    paddingHorizontal: 16,
+    fontSize: 16,
+    color: '#2c3e50',
+    marginVertical: 10
+  },
+  button: {
+    width: 300,
+    backgroundColor: '#e74c3c',
+    marginVertical: 10,
+    paddingVertical: 13
+  },
+  buttonText: {
+    fontSize: 16,
+    fontWeight: '500',
+    color: '#ffffff',
+    textAlign: 'center'
   }
+
 });
+
+export default Login;

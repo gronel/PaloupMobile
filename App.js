@@ -1,44 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import { Navigation } from 'react-native-navigation';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\nCmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\nShake or press menu button for dev men' +
-      'u'
-});
+import Login from './src/Screen/Login';
+import MainTabs from './src/Screen/MainTabs';
+import MyPalo from './src/Screen/MyPalo';
+import Notifications from './src/Screen/Notifications';
+import SignUp from './src/Screen/SignUp';
+import Stat from './src/Screen/Stat';
+import You from './src/Screen/You';
 
-import Splash from './src/components/Splash/Splash';
-import Login from './src/components/Login/Login';
-import Dashboard from './src/components/Dashboard/Dashboard';
-import Main from './src/components/Main/Main';
+Navigation.registerComponent("com.paloupmobile.Login", () => Login);
+Navigation.registerComponent("com.paloupmobile.MainTabs", () => MainTabs);
+Navigation.registerComponent("com.paloupmobile.MyPalo", () => MyPalo);
+Navigation.registerComponent("com.paloupmobile.Notifications", () => Notifications);
+Navigation.registerComponent("com.paloupmobile.SignUp", () => SignUp);
+Navigation.registerComponent("com.paloupmobile.Stat", () => Stat);
+Navigation.registerComponent("com.paloupmobile.You", () => You);
 
-export default class App extends Component < {} > {
-  render() {
-    return (<Main/>);
+//Start Up
+Navigation.startSingleScreenApp({
+  screen: {
+    screen:'com.paloupmobile.Login',
+    title: 'Login',
+    navigatorStyle: { navBarHidden:true}
+   
   }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
-  }
-});
+})
