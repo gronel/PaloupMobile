@@ -22,7 +22,7 @@ Navigation.startSingleScreenApp({
   screen: {
     screen:'com.paloupmobile.Login',
     title: 'Login',
-    navigatorStyle: { navBarHidden:true}
+    navigatorStyle: { navBarHidden:true,statusBarColor:"#e74c3c"}
    
   }
 })

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 
+
 const Login = props => {
 
   return (
@@ -10,7 +11,6 @@ const Login = props => {
         underlineColorAndroid='#1c313a'
         placeholder="Email"
         placeholderTextColor="#95a5a6"
-        selectionColor="#fff"
         keyboardType="email-address"
         onSubmitEditing={() => this.password.focus()}/>
       <TextInput
