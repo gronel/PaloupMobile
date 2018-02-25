@@ -1,81 +1,50 @@
 //import liraries
-import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import ChartView from 'react-native-highcharts';
 // create a component
-class MyPalo extends Component {
+class myPalo extends Component {
     render() {
-        var Highcharts = 'Highcharts';
-        var conf = {
+        const Highcharts = 'Highcharts';
+        const conf = {
             chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'pie'
+                type: 'bar'
             },
             title: {
-                text: 'Browser market shares January, 2015 to May, 2015'
+                text: 'Stacked bar chart'
             },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            xAxis: {
+                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Total fruit consumption'
+                }
+            },
+            legend: {
+                reversed: true
             },
             plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                        }
-                    }
+                series: {
+                    stacking: 'normal'
                 }
             },
             series: [{
-                name: 'Brands',
-                colorByPoint: true,
-                data: [{
-                    name: 'IE',
-                    y: 56.33
-                }, {
-                    name: 'Chrome',
-                    y: 24.03,
-                    sliced: true,
-                    selected: true
-                }, {
-                    name: 'Firefox',
-                    y: 10.38
-                }, {
-                    name: 'Safari',
-                    y: 4.77
-                }, {
-                    name: 'Opera',
-                    y: 0.91
-                }, {
-                    name: 'Other',
-                    y: 0.2
-                }]
+                name: 'John',
+                data: [5, 3, 4, 7, 2]
+            }, {
+                name: 'Jane',
+                data: [2, 2, 3, 2, 1]
+            }, {
+                name: 'Joe',
+                data: [3, 4, 4, 2, 5]
             }]
         };
 
-        const options = {
-            global: {
-                useUTC: false
-            },
-            lang: {
-                decimalPoint: ',',
-                thousandsSep: '.'
-            }
-        };
-
         return (
-            <ChartView
-                style={{
-                height: 300
-            }}
-                config={conf}
-                options={options}></ChartView>
+
+            <ChartView style={{ height: 300 }} config={conf} ></ChartView>
         );
     }
 }
@@ -91,4 +60,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default MyPalo;
+export default myPalo;

@@ -30,7 +30,7 @@ export default class Login extends Component {
     this
       .props
       .navigator
-      .push({screen: "com.paloupmobile.SignUp", title: "SignUp",    navigatorStyle: { navBarHidden:true,statusBarColor:"#e74c3c"}});
+      .push({screen: "com.paloupmobile.SignUp", title: "SignUp"});
   }
 
   render() {

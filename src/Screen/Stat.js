@@ -1,14 +1,12 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import MyPalo from '../components/Dashboard/MyPalo';
 // create a component
 class Stat extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Stat</Text>
-            </View>
+            <MyPalo />
         );
     }
 }
@@ -19,8 +17,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: '#ecf0f1',
     },
+    MyPaloView: {
+        height: 300,
+        width: "100%",
+        backgroundColor: '#2ecc71',
+    }
 });
 
 //make this component available to the app
