@@ -1,0 +1,521 @@
+{
+    "stackColumn": {
+        "categories": [
+            "Responsible",
+            "Collaborator",
+            "Tollgater"
+        ],
+        "series": [
+            {
+                "name": "Open",
+                "data": [
+                    1,
+                    2,
+                    536
+                ]
+            },
+            {
+                "name": "Park",
+                "data": [
+                    0,
+                    0,
+                    27
+                ]
+            },
+            {
+                "name": "Close",
+                "data": [
+                    0,
+                    33,
+                    3237
+                ]
+            },
+            {
+                "name": "Drop",
+                "data": [
+                    0,
+                    1,
+                    77
+                ]
+            }
+        ]
+    },
+    "responsibleTreeMap": [
+        {
+            "id": "responsible",
+            "name": "For Response",
+            "color": "#2196F3",
+            "value": 33,
+            "parent": null
+        },
+        {
+            "id": "tollgater",
+            "name": "For Tollgating",
+            "color": "#FF9800",
+            "value": 33,
+            "parent": null
+        },
+        {
+            "id": "collaborator",
+            "name": "For Collab",
+            "color": "#009688",
+            "value": 33,
+            "parent": null
+        },
+        {
+            "id": null,
+            "name": "RUEL O. SUMAGUI",
+            "color": null,
+            "value": 1,
+            "parent": "responsible"
+        },
+        {
+            "id": null,
+            "name": "SALVADOR  P. IBAÑEZ JR.",
+            "color": null,
+            "value": 18,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JESSIE I. DORIA",
+            "color": null,
+            "value": 17,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "AIKO C. BAYOBO",
+            "color": null,
+            "value": 33,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "EMMANUEL J. JOSE",
+            "color": null,
+            "value": 42,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ADONIS S. QUEBRAL",
+            "color": null,
+            "value": 21,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ARON CHRISTIAN Y. JAVIER",
+            "color": null,
+            "value": 40,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARLO B. PRESADO",
+            "color": null,
+            "value": 15,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ANN LORRAINE V. GANGOSO",
+            "color": null,
+            "value": 5,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JUANITA F. REYES",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "NORELYN V. BARCELONA",
+            "color": null,
+            "value": 6,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "GALVEZ, RICARDO ",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "GHIL MICHAEL DANICO Y. ORALLO",
+            "color": null,
+            "value": 9,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "CAROLYN M. ALCALA",
+            "color": null,
+            "value": 6,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "FRANCISCO  R. CARCILLAR JR.",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "RUEL O. SUMAGUI",
+            "color": null,
+            "value": 16,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "CRISTOPHER B. SARAGA",
+            "color": null,
+            "value": 41,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "REYNALDO R. VERGARA",
+            "color": null,
+            "value": 6,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "FAITH D. COS",
+            "color": null,
+            "value": 5,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "CORAZON M. CASTILLO",
+            "color": null,
+            "value": 21,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "CHRISTIAN WYN C. DELOS SANTOS",
+            "color": null,
+            "value": 20,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "RICARDO . GALVEZ",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "STEPHANIE LIANNE MAE T. TAN",
+            "color": null,
+            "value": 4,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "REGEM L. AÑORA",
+            "color": null,
+            "value": 5,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARIA CYNTHIA C. CASTILLO",
+            "color": null,
+            "value": 13,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JAMILA CATHLEEN G. CABALQUINTO",
+            "color": null,
+            "value": 3,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "BRIGIDITTE F. GODOY",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MA. BENILDA A. ODIAMAN",
+            "color": null,
+            "value": 4,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARK ANTHONY CRIS G. SENO",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JESRAH I. MORADILLA",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "KENITCHIE B. ISHIKAWA",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARK ANTHONY G. ARAÑO",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JESUS G. FAJARDO",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "DIANE L. DIANA",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JENNIFER CHARLOT D. REYES",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ROSE ARBIE B. LISTONES",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ALEN D. MARQUEZ",
+            "color": null,
+            "value": 6,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JANNAH TRISIA C. REYES",
+            "color": null,
+            "value": 3,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "PAOLA BIANCA T. MACALINAO",
+            "color": null,
+            "value": 6,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "RACHEL L. DE LA CRUZ",
+            "color": null,
+            "value": 3,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARVIS T. MARFIL",
+            "color": null,
+            "value": 12,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JOJO A. CAÑEDO",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "CHERYL B. GALANIDA",
+            "color": null,
+            "value": 4,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "GILBERT C. DE SAGUN",
+            "color": null,
+            "value": 3,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JERICK P. VALGUNA",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "WILSON S. MAGNO",
+            "color": null,
+            "value": 4,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "LUISITO  A. ZAÑO JR.",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ERICA MAE M. SANCHEZ",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "EMMA P. BELTRAN",
+            "color": null,
+            "value": 3,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "DIOSDADO H. CLENUAR",
+            "color": null,
+            "value": 16,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "FERDINAND G. PORALAN",
+            "color": null,
+            "value": 14,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "KEVIN M. MANIKAN",
+            "color": null,
+            "value": 14,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MELODY M. MALLARE",
+            "color": null,
+            "value": 8,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MONDITO G. PANELO",
+            "color": null,
+            "value": 19,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "RACQUEL T. MANUEL",
+            "color": null,
+            "value": 17,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARIFE M. LIRIO",
+            "color": null,
+            "value": 16,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JOSEPH JOHN  O. TORRENTE",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "JEROME S. MAGCAMIT",
+            "color": null,
+            "value": 2,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARIA CRISTINA D. ANDAL",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "RIZIA FAITH M. MALABANAN",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "CLAIRE N. CUESTAS",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "PRINCESS C. BORJA",
+            "color": null,
+            "value": 5,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "ANDY M. FADERANGA",
+            "color": null,
+            "value": 1,
+            "parent": "tollgater"
+        },
+        {
+            "id": null,
+            "name": "MARLO B. PRESADO",
+            "color": null,
+            "value": 1,
+            "parent": "collaborator"
+        },
+        {
+            "id": null,
+            "name": "REYNALDO R. VERGARA",
+            "color": null,
+            "value": 1,
+            "parent": "collaborator"
+        }
+    ]
+}
