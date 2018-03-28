@@ -13,7 +13,6 @@ import java.util.Arrays;
 import java.util.List;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.reactnativenavigation.NavigationApplication;
-
  public class MainApplication extends NavigationApplication {
 
      @Override

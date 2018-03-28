@@ -1,31 +1,36 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import {Button} from 'react-native-elements';
 
 import TaskList from "../components/Task/TaskList";
 
 import AcknowledgementData from "../data/mypalo/AcknowledgementPending.json";
-
+import CameraRollPicker from 'react-native-camera-roll-picker';
 
 // create a component
 class MyPalo extends Component {
 
     state = {
+        file: [],
         AcknowledgementData:AcknowledgementData
     }
-
+ 
     onItemSelected= () =>{
+      
+          
+    }
+
+    onSelectFile =()=>{
 
     }
 
     render() {
 
-        console.log(this.state.AcknowledgementData[0].aa.issueId);
         return (
             <View style={styles.container}>
-               <TaskList
-               data={this.state.AcknowledgementData}
-               onItemSelected={this.onItemSelected}/>
+       <CameraRollPicker
+  callback={this.onSelectFile.bind(this)} />
             </View>
         );
     }
