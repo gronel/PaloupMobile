@@ -3,6 +3,7 @@ package com.paloupmobile;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -26,7 +27,8 @@ import com.reactnativenavigation.NavigationApplication;
          // No need to add RnnPackage and MainReactPackage
          return Arrays.<ReactPackage>asList(
             new MapsPackage(),
-              new VectorIconsPackage()
+              new VectorIconsPackage(),
+              new ReactNativeOneSignalPackage()
          );
      }
 

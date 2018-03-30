@@ -7,7 +7,8 @@ import TaskList from "../components/Task/TaskList";
 
 import AcknowledgementData from "../data/mypalo/AcknowledgementPending.json";
 import CameraRollPicker from 'react-native-camera-roll-picker';
-
+import ImagePicker from 'react-native-image-crop-picker';
+import OneSignal from 'react-native-onesignal'; // Import package from node modules
 // create a component
 class MyPalo extends Component {
 
@@ -15,9 +16,40 @@ class MyPalo extends Component {
         file: [],
         AcknowledgementData:AcknowledgementData
     }
+
+    componentWillMount() {
+        OneSignal.addEventListener('received', this.onReceived);
+        OneSignal.addEventListener('opened', this.onOpened);
+        OneSignal.addEventListener('ids', this.onIds);
+    }
+
+    componentWillUnmount() {
+        OneSignal.removeEventListener('received', this.onReceived);
+        OneSignal.removeEventListener('opened', this.onOpened);
+        OneSignal.removeEventListener('ids', this.onIds);
+    }
+
+    onReceived(notification) {
+        console.log("Notification received: ", notification);
+    }
+
+    onOpened(openResult) {
+        console.log('Message: ', openResult.notification.payload.body);
+        console.log('Data: ', openResult.notification.payload.additionalData);
+        console.log('isActive: ', openResult.notification.isAppInFocus);
+        console.log('openResult: ', openResult);
+    }
+
+    onIds(device) {
+        console.log('Device info: ', device);
+    }
  
     onItemSelected= () =>{
-      
+        ImagePicker.openPicker({
+            multiple: true
+          }).then(images => {
+            console.log(images);
+          });
           
     }
 
@@ -29,8 +61,7 @@ class MyPalo extends Component {
 
         return (
             <View style={styles.container}>
-       <CameraRollPicker
-  callback={this.onSelectFile.bind(this)} />
+<Button title="browse" onPress={this.onItemSelected}/>
             </View>
         );
     }
