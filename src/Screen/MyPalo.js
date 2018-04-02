@@ -1,68 +1,89 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import {Button} from 'react-native-elements';
-
-import TaskList from "../components/Task/TaskList";
+import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { List, CheckBox, ListItem, Card, Button } from 'react-native-elements';
 
 import AcknowledgementData from "../data/mypalo/AcknowledgementPending.json";
 import CameraRollPicker from 'react-native-camera-roll-picker';
-import ImagePicker from 'react-native-image-crop-picker';
-import OneSignal from 'react-native-onesignal'; // Import package from node modules
+
+//import ImagePicker from 'react-native-image-crop-picker';
+//import OneSignal from 'react-native-onesignal'; // Import package from node modules
+
 // create a component
 class MyPalo extends Component {
 
     state = {
         file: [],
-        AcknowledgementData:AcknowledgementData
+        data: AcknowledgementData
     }
 
-    componentWillMount() {
-        OneSignal.addEventListener('received', this.onReceived);
-        OneSignal.addEventListener('opened', this.onOpened);
-        OneSignal.addEventListener('ids', this.onIds);
+    // componentWillMount() {
+    //     OneSignal.addEventListener('received', this.onReceived);
+    //     OneSignal.addEventListener('opened', this.onOpened);
+    //     OneSignal.addEventListener('ids', this.onIds);
+    // }
+
+    // componentWillUnmount() {
+    //     OneSignal.removeEventListener('received', this.onReceived);
+    //     OneSignal.removeEventListener('opened', this.onOpened);
+    //     OneSignal.removeEventListener('ids', this.onIds);
+    // }
+
+    // onReceived(notification) {
+    //     console.log("Notification received: ", notification);
+    // }
+
+    // onOpened(openResult) {
+    //     console.log('Message: ', openResult.notification.payload.body);
+    //     console.log('Data: ', openResult.notification.payload.additionalData);
+    //     console.log('isActive: ', openResult.notification.isAppInFocus);
+    //     console.log('openResult: ', openResult);
+    // }
+
+    // onIds(device) {
+    //     console.log('Device info: ', device);
+    // }
+
+    // onItemSelected= () =>{
+    //     ImagePicker.openPicker({
+    //         multiple: true
+    //       }).then(images => {
+    //         console.log(images);
+    //       });
+
+    // }
+
+    onSelectFile = () => {
+
     }
 
-    componentWillUnmount() {
-        OneSignal.removeEventListener('received', this.onReceived);
-        OneSignal.removeEventListener('opened', this.onOpened);
-        OneSignal.removeEventListener('ids', this.onIds);
-    }
+    _renderItem = ({ item }) => {
 
-    onReceived(notification) {
-        console.log("Notification received: ", notification);
-    }
+        return (
+            <View style={[styles.taskCardLayout, { backgroundColor: item.bgcolor, }]}>
+                <View style={{ flexDirection: 'row', alignContent: "space-between" }}>
+                    <Text style={{ color: 'white' }}>{item.issueId}</Text>
+                    <Text style={{ color: 'white' }}>{item.Details}</Text>
+                </View>
 
-    onOpened(openResult) {
-        console.log('Message: ', openResult.notification.payload.body);
-        console.log('Data: ', openResult.notification.payload.additionalData);
-        console.log('isActive: ', openResult.notification.isAppInFocus);
-        console.log('openResult: ', openResult);
-    }
+                <Text style={{ color: 'white' }}>Action Plan: {item.actionplan}</Text>
+            </View>
 
-    onIds(device) {
-        console.log('Device info: ', device);
-    }
- 
-    onItemSelected= () =>{
-        ImagePicker.openPicker({
-            multiple: true
-          }).then(images => {
-            console.log(images);
-          });
-          
-    }
 
-    onSelectFile =()=>{
 
-    }
+        )
+    };
 
     render() {
 
         return (
-            <View style={styles.container}>
-<Button title="browse" onPress={this.onItemSelected}/>
-            </View>
+            <List containerStyle={{ borderTopWidth: 0, borderBottomWidth: 0 }} >
+                <FlatList
+                    data={this.state.data}
+                    keyExtractor={item => item.issueId}
+                    renderItem={this._renderItem}
+                />
+            </List>
         );
     }
 }
@@ -73,8 +94,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-  
+
     },
+    taskCardLayout: {
+        margin: 3,
+
+    }
 });
 
 //make this component available to the app
