@@ -3,6 +3,14 @@ package com.paloupmobile;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
+import com.reactnativenavigation.NavigationReactPackage;
+import com.airbnb.android.react.maps.MapsPackage;
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
+import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
+import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
+import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
